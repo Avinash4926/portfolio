@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avinash Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color:white;
+    scroll-behavior:smooth;
+}
+
+/* ✨ Animation */
+section{
+    padding:60px 10%;
+    animation: fadeIn 1.2s ease-in;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+header{
+    text-align:center;
+    padding:40px 20px;
+}
+
+header h1{
+    font-size:45px;
+}
+
+header p{
+    margin-top:10px;
+    font-size:18px;
+    color:#f1f1f1;
+}
+
+nav{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:15px;
+    background: rgba(0,0,0,0.2);
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#ffd369;
+}
+
+.card-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-top:30px;
+}
+
+.card{
+    background:white;
+    color:#333;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+/* 🌟 Glow Effect Added */
+.skills span{
+    display:inline-block;
+    background:#00c9a7;
+    margin:5px;
+    padding:8px 15px;
+    border-radius:20px;
+    font-size:14px;
+    color:white;
+    box-shadow:0 0 10px #00c9a7;
+    transition:0.3s;
+}
+
+.skills span:hover{
+    box-shadow:0 0 20px #00c9a7, 0 0 40px #00c9a7;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background: rgba(0,0,0,0.3);
+}
+
+/* 👤 Profile Image Circle */
+.profile-img{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid white;
+    margin-top:20px;
+    box-shadow:0 0 20px rgba(255,255,255,0.6);
+}
+
+/* 📄 Resume Button */
+.resume-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 20px;
+    background:#ffd369;
+    color:#333;
+    border-radius:25px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.resume-btn:hover{
+    background:white;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Hi, I'm Avinash </h1>
+    <p>B.Tech AI & ML Student | Web Developer | Tech Enthusiast</p>
+
+    <!-- 👤 Added Profile Image -->
+    <img src="C:\Users\Lenovo\Desktop\portfolio\avinash_photo.jpeg" alt="Profile Image" class="profile-img">
+
+    <!-- 📄 Added Resume Button -->
+    <br>
+   <a href="#" onclick="downloadResume()" class="resume-btn">
+    Download Resume
+</a>
+</header>
+
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p style="margin-top:15px;">
+        I am passionate about Artificial Intelligence, Machine Learning and Web Development.
+        I love building innovative networking and AI based projects that solve real-world problems.
+    </p>
+</section>
+
+<section id="projects">
+    <h2>My Projects</h2>
+    <div class="card-container">
+        <div class="card">
+            <h3>Smart Attendance System</h3>
+            <p>WiFi based automatic attendance using networking concepts.</p>
+        </div>
+        <div class="card">
+            <h3>Air Quality Monitor using AI</h3>
+            <p>AI model to monitor and predict pollution levels.</p>
+        </div>
+        <div class="card">
+            <h3>Startup Idea - Smart Ride</h3>
+            <p>An innovative ride-sharing startup concept with new features.</p>
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>My Skills</h2>
+    <div class="skills" style="margin-top:20px;">
+        <span>Python</span>
+        <span>Machine Learning</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Networking</span>
+        <span>JavaScript</span>
+    </div>
+</section>
+
+<section id="achievements">
+    <h2>Achievements</h2>
+    <div class="card-container">
+        <div class="card">
+            <h3>🏆 Hackathon Participant</h3>
+            <p>Participated in inter-college hackathon building AI solutions.</p>
+        </div>
+        <div class="card">
+            <h3>📜 Certification</h3>
+            <p>Completed Machine Learning and Networking certification courses.</p>
+        </div>
+        <div class="card">
+            <h3>🚀 Startup Enthusiast</h3>
+            <p>Worked on innovative startup ideas related to smart mobility.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p style="margin-top:15px;">📧 avinashravi381@gmail.com</p>
+    <p>📱 +91 7826052018</p>
+</section>
+
+<footer>
+    <p>© 2026 Avinash | All Rights Reserved</p>
+</footer>
+
+<!-- jsPDF -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script>
+async function downloadResume() {
+
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    const pageWidth = doc.internal.pageSize.getWidth();
+    let y = 20;
+
+    // ===== Corporate Blue Theme =====
+    const primaryBlue = [25, 118, 210];
+
+    function checkPageBreak(space = 10) {
+        if (y + space > 280) {
+            doc.addPage();
+            y = 20;
+        }
+    }
+
+    function sectionTitle(title) {
+        checkPageBreak(15);
+
+        doc.setFillColor(...primaryBlue);
+        doc.rect(15, y - 6, pageWidth - 30, 8, "F");
+
+        doc.setTextColor(255, 255, 255);
+        doc.setFontSize(11);
+        doc.setFont(undefined, "bold");
+        doc.text(title.toUpperCase(), 20, y);
+
+        doc.setTextColor(0, 0, 0);
+        y += 12;
+    }
+
+    function sectionBody(content) {
+        doc.setFontSize(10.5);
+        doc.setFont(undefined, "normal");
+
+        const lines = doc.splitTextToSize(content, 170);
+        doc.text(lines, 20, y);
+        y += lines.length * 5.5 + 6;
+    }
+
+    // ===== HEADER =====
+    const name = "AVINASH R";
+    const role = "AI / ML ENGINEER";
+
+    doc.setFontSize(20);
+    doc.setFont(undefined, "bold");
+    doc.text(name, pageWidth / 2, y, { align: "center" });
+    y += 7;
+
+    doc.setFontSize(12);
+    doc.setFont(undefined, "normal");
+    doc.text(role, pageWidth / 2, y, { align: "center" });
+    y += 10;
+
+    doc.setDrawColor(...primaryBlue);
+    doc.setLineWidth(1);
+    doc.line(20, y, pageWidth - 20, y);
+    y += 10;
+
+    // ===== CONTACT WITH ICON STYLE =====
+    const email = "avinashravi381@gmail.com";
+    const phone = "7826052018";
+    const github = "github.com/Avinash4926";
+
+    const linkedinElement = document.querySelector("#linkedin");
+    const linkedin = linkedinElement ? 
+        + linkedinElement.innerText : 
+        " linkedin.com/in/yourprofile";
+
+    doc.setFontSize(10.5);
+    doc.text(email, 20, y);
+    doc.text(phone, 110, y);
+    y += 6;
+
+    doc.text(github, 20, y);
+    doc.text(linkedin, 110, y);
+    y += 12;
+
+    // ===== PROFILE SUMMARY =====
+    const about = document.querySelector("#about p").innerText;
+    sectionTitle("Profile Summary");
+    sectionBody(about);
+
+    // ===== SKILLS =====
+    const skills = Array.from(document.querySelectorAll("#skills span"))
+                        .map(skill => "• " + skill.innerText)
+                        .join("   ");
+
+    sectionTitle("Technical Skills");
+    sectionBody(skills);
+
+    // ===== PROJECTS =====
+    const projects = Array.from(document.querySelectorAll("#projects .card"))
+        .map(card => {
+            const title = card.querySelector("h3").innerText;
+            const desc = card.querySelector("p").innerText;
+            return "• " + title + "\n   " + desc;
+        })
+        .join("\n\n");
+
+    sectionTitle("Projects");
+    sectionBody(projects);
+
+     // ===== ACHIEVEMENTS =====
+const achievementsSection = document.querySelector("#achievements");
+if (achievementsSection) {
+
+    const achievements = Array.from(
+        achievementsSection.querySelectorAll(".card")
+    ).map(card => {
+        let title = card.querySelector("h3").innerText;
+        let desc = card.querySelector("p").innerText;
+
+        // Remove emoji or special characters
+        title = title.replace(/[^\x00-\x7F]/g, "");
+
+        return "• " + title + "\n   " + desc;
+    }).join("\n\n");
+
+    sectionTitle("Achievements");
+    sectionBody(achievements);
+}
+
+    // ===== EDUCATION =====
+    sectionTitle("Education");
+    sectionBody(
+        "B.Tech – Artificial Intelligence & Machine Learning\n" +
+        "Manakula Vinayagar Institute of Technology\n" +
+        "CGPA: 8.72 (Currently Pursuing)\n\n" +
+        "HSC & SSLC – 80%"
+    );
+
+    // ===== INTERNSHIP =====
+    sectionTitle("Internship");
+    sectionBody(
+        "Data Science & Machine Learning Intern\n" +
+        "Eduexpose"
+    );
+
+    // ===== PROFILE PHOTO (OPTIONAL) =====
+    const img = document.querySelector(".profile-img");
+    if (img) {
+        try {
+            const canvas = document.createElement("canvas");
+            const ctx = canvas.getContext("2d");
+            canvas.width = img.width;
+            canvas.height = img.height;
+            ctx.drawImage(img, 0, 0);
+            const imgData = canvas.toDataURL("image/jpeg");
+            doc.addImage(imgData, "JPEG", pageWidth - 45, 20, 25, 25);
+        } catch (e) {
+            console.log("Image not added");
+        }
+    }
+
+    doc.save("Avinash_Resume.pdf");
+}
+</script>
+
+</body>
+</html>
