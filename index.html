@@ -374,21 +374,6 @@ if (achievementsSection) {
         "Eduexpose"
     );
 
-    // ===== PROFILE PHOTO (OPTIONAL) =====
-    const img = document.querySelector(".profile-img");
-    if (img) {
-        try {
-            const canvas = document.createElement("canvas");
-            const ctx = canvas.getContext("2d");
-            canvas.width = img.width;
-            canvas.height = img.height;
-            ctx.drawImage(img, 0, 0);
-            const imgData = canvas.toDataURL("image/jpeg");
-            doc.addImage(imgData, "JPEG", pageWidth - 45, 20, 25, 25);
-        } catch (e) {
-            console.log("Image not added");
-        }
-    }
 
     doc.save("Avinash_Resume.pdf");
 }
@@ -397,4 +382,5 @@ if (achievementsSection) {
 </body>
 
 </html>
+
 
